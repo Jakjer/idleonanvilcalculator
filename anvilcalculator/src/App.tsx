@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react';
 import './App.css'
 
 
@@ -47,6 +48,7 @@ function App() {
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <img src="/trimmed-anvil.png" />
       <h1>Idle-On Anvil Calculator</h1>
+      <h2>Calculate the optimal amount of capacity you need for a 24hr cycle of anvil.</h2>
     </div>
       <div>
         <div>
@@ -86,6 +88,7 @@ function App() {
           <label>{calculatedCapacity}</label>
         </div>
       </div>
+      <Analytics/>
     </div>
   )
 }
