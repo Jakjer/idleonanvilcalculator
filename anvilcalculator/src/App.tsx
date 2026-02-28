@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 
@@ -30,9 +28,9 @@ function App() {
   const FULL_DAY_CAPACITY_HOURS = 24;
   const [calculatorInput, setCalculatorInput] = useState<ICalculator>({
     speedPerHour: 0,
-    hammerMultiplier: 0,
+    hammerMultiplier: 1,
     calculatedCapacity: 100,
-    selectedProductionValue: 0,
+    selectedProductionValue: 100,
   });
 
   const multiplierValues = [1,2,3];
@@ -45,16 +43,11 @@ function App() {
   }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+ <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <img src="/trimmed-anvil.png" />
       <h1>Idle-On Anvil Calculator</h1>
+    </div>
       <div>
         <div>
           <label>Speed (Millions/hr): </label>
@@ -93,7 +86,7 @@ function App() {
           <label>{calculatedCapacity}</label>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 // (Speed/hr / Item Points) * # Hammers * 24
