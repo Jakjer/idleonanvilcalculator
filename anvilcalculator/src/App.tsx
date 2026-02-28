@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 
 
@@ -86,6 +87,7 @@ function App() {
           <label>{calculatedCapacity}</label>
         </div>
       </div>
+      <Analytics />
     </div>
   )
 }
